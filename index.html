@@ -21,14 +21,37 @@
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
 <script src="phonegap.js"></script><!-- necesario-->
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
 </head>
-<body>
+<body onLoad="MM_preloadImages('imagenes/ima2.png','imagenes/ima3.jpg','imagenes/ima4.png','imagenes/ima5.jpg','imagenes/ima6.jpg','imagenes/ima7.png')">
 <div data-role="page" id="Principal" data-theme="d">
 	<div data-role="header" data-add-back-btn="true" data-add-back-text="Regresar" data-add-back-theme="a">
      <h1>Tutorial DSUPE</h1>
      </div>
      <br>
-     <div align="center">
+     <div align="center" width="90%">
      	<!-- Start WOWSlider.com BODY section -->
 <div id="wowslider-container1">
 <div class="ws_images"><ul>
@@ -150,7 +173,7 @@ img {
   </li>
 </ul><br>
 <div data-role="main" class="ui-content" align="center">
-      <div style="width:50%;" >
+      <div style="width:70%;" >
        <ul data-role="controlgroup" data-type="vertical" data-theme="b" >
         <li class="ui-first-child ui-last-child"> <a href='https://www.youtube.com/watch?v=qDttSc3RQBc' data-role="button" >
           <h2>ver Video Tutorial<br> como hacer un DFD </h2>
@@ -178,7 +201,7 @@ img {
   </li>
 </ul>
 <div data-role="main" class="ui-content" align="center">
-      <div style="width:50%;" >
+      <div style="width:70%;" >
        <ul data-role="controlgroup" data-type="vertical" data-theme="c" >
         <li class="ui-first-child ui-last-child"> <a href='https://www.youtube.com/watch?v=y9feUYox_9Q' data-role="button" >
           <h2>ver Video Tutorial<br> como instalar Pseint </h2>
@@ -281,7 +304,7 @@ img {
       </div>
      </div>
      <div data-role="main" class="ui-content" align="center">
-    <div style="width:50%;" >
+    <div style="width:60%;" >
       <ul data-role="controlgroup" data-type="vertical" data-theme="d" >
         <li class="ui-first-child ui-last-child"> <a href='https://www.youtube.com/playlist?list=PLhbcXfA7vHX64kzwPvdHGOsiPh9q3IOhF' data-role="button" >
 			<h2> Curso Basico C#<br> has click aqui</h2>
@@ -321,7 +344,8 @@ img {
       	 El enunciado del problema, el cual debe ser claro y completo. Es fundamental conocer y delimitar por completo el problema, saber que es lo que se desea que realice la computadora, mientras esto no se conozca del todo, no tiene caso continuar con el siguiente paso.
       </p>
       <!--Aqui pon tu img de sust uwu-->
-      
+      <div align="center">
+      <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image79','','imagenes/ima2.png',1)"><img src="imagenes/img2.png" alt="" width="50%" height="auto" id="Image79"></a> </div>
       </div>
      </div>
      
@@ -341,6 +365,7 @@ img {
       <div data-role="content" align="justify">
        <p>Consiste en establecer una serie de preguntas acerca de lo que establece el problema, para poder determinar si se cuenta con los elementos suficientes para llevar a cabo la solución del mismo.</p>
        <!--Aqui pon tu img de sust uwu-->
+       <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image80','','imagenes/ima3.jpg',1)"><img src="imagenes/img3.jpg" alt="" width="50%" height="auto" id="Image80"></a></div>
      </div>
       
       </div>
@@ -361,6 +386,7 @@ img {
       <div data-role="content" align="justify">
        <p>Una vez definido y analizado el problema, se produce a la creación del algoritmo (Diagrama de flujo o pseudocodigo) en el cual se da la serie de pasos ordenados que nos proporcione un método explicito para la solución del problema.</p>
        <!--Aqui pon tu img de sust uwu-->
+       <div align="center"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image81','','imagenes/ima4.png',1)"><img src="imagenes/img4.jpg" alt="" width="50%" height="auto" id="Image81"></a></div>
    </div>
       
       </div>
@@ -382,6 +408,7 @@ img {
    
        <p> Consiste en escribir la solución del problema (de acuerdo al pseudocodigo); en una serie de instrucciones detalladas en un código reconocible por la computadora; es decir un lenguaje de programación (ya sea de bajo o alto nivel), a esta serie de instrucciones se le conoce como PROGRAMA.</p>
        <!--Aqui pon tu img de sust uwu-->
+       <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image82','','imagenes/ima5.jpg',1)"><img src="imagenes/ima5.jpg" alt="" width="50%" height="auto" id="Image82"></a></div>
       </div>
       </div>
      </div>
@@ -408,6 +435,7 @@ img {
 La depuración consiste en eliminar los errores que se hayan detectado durante la prueba, para dar paso a una situación adecuada y sin errores.
 </p>
 <!--Aqui pon tu img de sust uwu-->
+<div align="center"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image83','','imagenes/ima6.jpg',1)"><img src="imagenes/img6.jpg" alt="" width="50%" height="auto" id="Image83"></a></div>
 </div>
       </div>
      </div>
@@ -453,6 +481,7 @@ La depuración consiste en eliminar los errores que se hayan detectado durante l
       <div data-role="content" align="justify">
       	  <p>Se lleva a cabo después de  terminado el programa, cuando se ha estado trabajando un tiempo, y se detecta que es necesario hacer un cambio, ajuste y/o complementación al programa para que siga trabajando de manera correcta. Para realizar esta función el programa debe estar debidamente documentado, lo cual facilitará la tarea. 
 </p><!--Aqui pon tu img de sust uwu-->
+     <div align="center"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image84','','imagenes/ima7.png',1)"><img src="imagenes/img8.jpg" alt="" width="50%" height="auto" id="Image84"></a></div>
       </div>
       
       </div>
@@ -699,7 +728,7 @@ Almacén de datos: archivos o repositorios que conservan información para uso p
       <div style="width:50%;" >
        <ul data-role="controlgroup" data-type="vertical" data-theme="a" >
         <li class="ui-first-child ui-last-child"> <a href='https://www.lucidchart.com/pages/es/s%C3%ADmbolos-de-diagramas-de-flujo-de-datos' data-role="button" >
-          <h2>Dar click aqui </h2>
+          <h2>Dar click <br>aqui </h2>
           </a> </li>
       </ul>
       </div>
@@ -943,7 +972,7 @@ Los resultados y el proceso de optimización se convierten en un respaldo cuanti
      <div align="center"><img src="imagenes/img27.png" width="70%" height="auto"  ></div>
       </div>
       <div data-role="main" class="ui-content" align="center">
-      <div style="width:50%;" >
+      <div style="width:70%;" >
         <ul data-role="controlgroup" data-type="vertical" data-theme="a" >
           <li class="ui-first-child ui-last-child"> <a href='https://www.youtube.com/watch?v=V-H2TxxGeoA' data-role="button" >
             <h2> ver video</h2>
@@ -980,7 +1009,7 @@ Un ejemplo que nos diga si cada número que tecleemos es positivo o negativo, y 
     En este ejemplo, si se introduce 0 la primera vez, la condición es falsa y ni siquiera se entra al bloque del "while", terminando el programa inmediatamente.
      </p>
      <div data-role="main" class="ui-content" align="center">
-      <div style="width:50%;" >
+      <div style="width:70%;" >
         <ul data-role="controlgroup" data-type="vertical" data-theme="a" >
           <li class="ui-first-child ui-last-child"> <a href='https://www.youtube.com/watch?v=awHzPmP8asg' data-role="button" >
             <h2> ver video</h2>
@@ -999,7 +1028,8 @@ Un ejemplo que nos diga si cada número que tecleemos es positivo o negativo, y 
        <h4>Jose Eduardo Telles Guerrero</h4>
       <img src="res/android/mdpi.png" width="56" height="56">
      </div>
-   </div><div data-role="page" id="Pagina01" data-theme="d">
+   </div>
+<div data-role="page" id="Pagina01" data-theme="d">
       <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="a">
        <h1>DATOS DEL DESARROLADOR</h1>
       </div>
@@ -1019,7 +1049,7 @@ Un ejemplo que nos diga si cada número que tecleemos es positivo o negativo, y 
        <h4>CENTRO DE BACHILLERATO TECNOLOGICO INDUSTRIAL Y DEL SERVICIOS NO.16</h4>
        <img src="imagenes/cbtis.PNG" width="20%" height="auto" alt=""/> </div>
 	   </div>
-</div>
+
      
      <div data-role="footer" align="center" data-theme="b" data-position="fixed">
        <h4>Jose Eduardo Telles Guerrero</h4>
